@@ -1,0 +1,9 @@
+venv/
+venv2/
+.idea*
+.idea/
+.mypy_cache/
+__pycache__/
+lastplot.pdf
+simulation_output/*
+output/

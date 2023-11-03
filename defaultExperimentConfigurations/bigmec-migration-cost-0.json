@@ -1,0 +1,54 @@
+{
+  "version": "0.1",
+  "num_simulation_steps": 86400,
+  "network_generator": {
+    "type": "san_francisco",
+    "topology": "2-tier-hierarchical",
+    "num_clouds": 50,
+    "cloudlet_memory_capacity": 8,
+    "cloud_memory_capacity": 1000,
+    "random_seed": 42
+  },
+  "cost_function": {
+    "type": "priority_based_latency_with_migration_cost",
+    "migration_cost": 0.0,
+    "latency_cost_factor": 1.0
+  },
+  "service_model": {
+    "type": "constant",
+    "services_per_user": 1,
+    "random_seed": 44,
+    "service_configuration": {
+      "type": "prototype",
+      "memory_requirement": 1,
+      "latency_requirement": 4,
+      "min_priority": 1,
+      "max_priority": 100
+    }
+  },
+  "user_model": {
+    "type": "cabspotting_one_day"
+  },
+  "migration_strategy": {
+    "type": "isa_heuristic",
+    "features": {
+      "user_last_base_station": true,
+      "relative_positions": true,
+      "absolute_positions": true,
+      "measured_latencies": true
+    },
+    "migration_trigger": "bs_changed",
+    "network_depth": 3,
+    "network_width": 20,
+    "epsilon": 0.05,
+    "exp_boost": 0,
+    "replay_memory_size": 100000,
+    "replay_buffer_sampling_rate": 0.0125,
+    "batch_size": 1000,
+    "episode_length": 100,
+    "discount_factor": 0.99,
+    "neighborhood_size": 10,
+    "enable_learning": true,
+    "recursion_depth": 0
+  }
+}

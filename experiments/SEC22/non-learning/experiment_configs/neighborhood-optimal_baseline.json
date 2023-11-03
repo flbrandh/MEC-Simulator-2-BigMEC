@@ -1,0 +1,38 @@
+{
+  "version": "0.2",
+  "num_simulation_steps": 86400,
+  "network_generator": {
+    "type": "san_francisco",
+    "topology": "2-tier-hierarchical",
+    "num_clouds": 50,
+    "cloudlet_memory_capacity": 20,
+    "cloud_memory_capacity": 5000,
+    "random_seed": 42
+  },
+  "cost_function": {
+    "type": "priority_based_latency_with_migration_cost",
+    "migration_cost": 0.0,
+    "latency_cost_factor": 1.0
+  },
+  "service_model": {
+    "type": "constant",
+    "services_per_user": 1,
+    "random_seed": 44,
+    "service_configuration": {
+      "type": "prototype",
+      "min_memory_requirement": 1,
+      "max_memory_requirement": 4,
+      "latency_requirement": 4,
+      "min_priority": 1,
+      "max_priority": 100
+    }
+  },
+  "user_model": {
+    "type": "cabspotting_one_day"
+  },
+  "service_placement_strategy" : {
+    "type": "myopic-optimal",
+    "update-interval": 1,
+    "neighborhood_size" : 10
+  }
+}

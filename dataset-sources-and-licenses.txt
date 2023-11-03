@@ -1,0 +1,15 @@
+The file "Datasets/cabspotting_one_day.pickled.gz" contains compressed a one-day slice of the epfl-mobility mobility trace dataset in python's pickle format (for small file size and fast loading)
+* url:     https://ieee-dataport.org/open-access/crawdad-epflmobility
+* License: Creative Commons Attribution (https://creativecommons.org/licenses/by/4.0)
+
+The file "Datasets/openCellId/cell_towers_san_francisco.csv" contains an extract of all verizon LTE base stations in downtown san francisco, extracted from openCellId (2019-12-11).
+* url:     https://www.opencellid.org
+* License: Creative Commons Attribution (https://creativecommons.org/licenses/by/4.0)
+
+The map files in "Datasets/" were provided by from OpenStreetMap (and color-adjusted for better visibility).
+* url:     https://www.openstreetmap.org
+* License: Open Database License (openstreetmap.org/copyright)
+
+The font "FreeSans.ttf" belongs to the  GNU FreeFont project.
+* url:     https://www.gnu.org/software/freefont/
+* License: General Public License 3 with the Font embedding exception (https://www.gnu.org/software/freefont/license.html)
